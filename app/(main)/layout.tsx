@@ -1,3 +1,4 @@
+import ModibleHeader from "@/components/ModibleHeader";
 import { Sidebar } from "@/components/sidebar";
 
 type Props = {
@@ -7,8 +8,9 @@ type Props = {
 const MainLayout = ({ children }: Props) => {
   return (
     <>
-      <Sidebar />
-      <main className="pl-[256px] ">
+      <ModibleHeader />
+      <Sidebar className="hidden lg:flex" />
+      <main className="lg:pl-[256px] h-full  lg:pt-0">
         <div className="bg-red-500 h-full">{children}</div>
       </main>
     </>
